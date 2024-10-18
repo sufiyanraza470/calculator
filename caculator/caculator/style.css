@@ -1,16 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
 }
 
-body {
+body{
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #000000, #8d5604);
+    /* background-color: #ff9900; */
+    background: linear-gradient(45deg, rgb(255, 185, 55),rgb(42, 42, 42));}
+
+#mainhead{
+    font-size: 65px;
+    font-weight: 900;
+    color: #ffc670;
+    text-align: start;
+    padding-right: 900px;
+    justify-content: left;
 }
 
 #calculator {
@@ -22,7 +35,9 @@ body {
     justify-content: center;
     background-color: black;
     border-radius: 19px;
-    box-shadow: rgba(8, 8, 8, 0.35) 20px 15px 15px;    
+    margin-top: -60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    z-index: 9;   
 }
 
 input {
@@ -70,4 +85,24 @@ button {
     background-color: #ff9900;
     color: rgb(0, 0, 0);
     font-weight: 800;
+}
+
+
+#myybutton{
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2A2A2C;
+    border-radius: 17px;
+    padding: 20px;
+    font-family: monospace;
+    font-weight: 900;
+    margin-left: 900px;
+    transition: .7s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+}
+
+#myybutton:hover{
+scale: 1.1;
+
 }
