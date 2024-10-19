@@ -14,60 +14,59 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #ff9900; */
-    background: linear-gradient(45deg, rgb(255, 185, 55),rgb(42, 42, 42));}
+    background: linear-gradient(45deg, rgb(255, 185, 55), rgb(42, 42, 42));
+    padding: 20px; /* For better spacing on mobile */
+}
 
 #mainhead{
-    font-size: 65px;
+    font-size: 48px; /* Reduced for responsiveness */
     font-weight: 900;
     color: #ffc670;
-    text-align: start;
-    padding-right: 900px;
-    justify-content: left;
+    text-align: center; /* Changed for better responsiveness */
+    margin-bottom: 20px;
 }
 
 #calculator {
-    height: 590px;
-    width: 350px;
+    height: 100%;
+    max-width: 350px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: black;
     border-radius: 19px;
-    margin-top: -60px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    margin-top: -10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 9;   
 }
 
 input {
     width: 100%;
-    padding: 30px 30px 50px 0px;
+    padding: 30px 0px 50px 0px;
     background: transparent;
     border: none;
     margin-bottom: 10px;
-}
-
-input::placeholder {
-    font-size: 40px;
-    text-align: right;
+    font-size: 24px; /* Adjusted for readability on smaller screens */
     color: white;
+    text-align: right;
 }
 
 button {
-    height: 70px;
-    width: 70px;
+    height: 60px; /* Reduced size for responsiveness */
+    width: 60px;
     border: none;
     border-radius: 50%;
-    margin: 0px 2px 10px 2px;
+    margin: 5px; /* Added spacing for responsiveness */
     color: #fff;
-    font-size: 30px;
+    font-size: 24px; /* Reduced size for responsiveness */
 }
 
 #allclear {
-    padding: 10px 80px 10px 60px;
-    border: none;
-    border-radius: 39px; /* Corrected the typo here */
+    width: 120px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
+    border-radius: 39px;
 }
 
 .numbers {
@@ -76,33 +75,87 @@ button {
 
 .firstBTN {
     background-color: #5C5C5F;
-    text-align: center;
     color: rgb(0, 0, 0);
-    font-weight: 00;
 }
 
-#orange{
+#orange {
     background-color: #ff9900;
     color: rgb(0, 0, 0);
     font-weight: 800;
 }
 
-
-#myybutton{
-    font-size: 28px;
+#myybutton {
+    font-size: 24px; /* Adjusted for responsiveness */
     text-decoration: none;
     color: #fff;
     background-color: #2A2A2C;
     border-radius: 17px;
-    padding: 20px;
+    padding: 15px; /* Adjusted padding */
     font-family: monospace;
     font-weight: 900;
-    margin-left: 900px;
+    margin-top: 20px; /* Adjusted margin */
     transition: .7s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#myybutton:hover{
-scale: 1.1;
+#myybutton:hover {
+    scale: 1.1;
+}
 
+@media (max-width: 768px) {
+    #mainhead {
+        font-size: 40px; /* Adjusted for smaller screens */
+        padding-right: 0; /* Reset padding for smaller screens */
+    }
+
+    #calculator {
+        width: 90%; /* Full width on smaller screens */
+        margin-top: 0; /* Adjusted for mobile */
+    }
+
+    input::placeholder {
+        font-size: 32px; /* Smaller text for mobile */
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #allclear {
+        width: 100px;
+        height: 50px;
+    }
+
+    #myybutton {
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #mainhead {
+        font-size: 32px;
+    }
+
+    input::placeholder {
+        font-size: 24px;
+    }
+
+    button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #allclear {
+        width: 90px;
+        height: 45px;
+    }
+
+    #myybutton {
+        font-size: 18px;
+        padding: 10px;
+    }
 }
